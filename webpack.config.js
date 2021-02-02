@@ -1,5 +1,7 @@
 const path = require('path')
 const GasPlugin = require('gas-webpack-plugin')
+// const HardSourceWebpackPlugin = require('hard-source-webpack-plugin')
+const webpack = require('webpack')
 
 module.exports = {
   context: __dirname,
@@ -31,5 +33,5 @@ module.exports = {
       }
     ]
   },
-  plugins: [new GasPlugin()]
+  plugins: [new webpack.ProgressPlugin(), new GasPlugin()]
 }
